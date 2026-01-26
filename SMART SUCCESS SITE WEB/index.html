@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - SmartSuccess</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="top-page">
+        <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="landing-page">
+            <h1 class="big-title">Construisons votre avenir</h1>
+            <p class="subtitle">La réussite commence avec nous !</p>
+        </div>
+    </section> 
+
+    <section class="services">
+        <div class="services-items">
+            <i class="fa-solid fa-user-graduate icono"></i>
+            <p class="services-details">Expertise sur-mesure</p>
+        </div>
+
+        <div class="services-items">
+            <i class="fa-solid fa-award icono"></i>
+            <p class="services-details">Performance garantie</p>
+        </div>
+
+        <div class="services-items">
+            <i class="fa-solid fa-chalkboard-user icono"></i>
+            <p class="services-details">Accompagnement stratégique</p>
+        </div>
+    </section> 
+
+    <section class="best-items">
+        <h2 class="section-title">Nos Programmes</h2>
+
+        <div class="slider-container">
+            <!-- flèche gauche -->
+            <button class="slider-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div class="programmes">
+                <a href="aide-aux-devoirs.html" class="options aideauxdevoirs">
+                    <div class="carrecaccueil">
+                        <p class="plant-name">Soutien Scolaire</p>
+                        <p class="plant-price">En savoir +</p>
+                    </div>
+                </a>
+
+                <a href="parcoursup.html" class="options parcoursup">
+                    <div class="carrecaccueil">
+                        <p class="plant-name">Module Parcoursup</p>
+                        <p class="plant-price">En savoir +</p>
+                    </div>
+                </a>
+
+                <a href="stages-intensifs.html" class="options stages">
+                    <div class="carrecaccueil">
+                        <p class="plant-name">Stages Intensifs</p>
+                        <p class="plant-price">En savoir +</p>
+                    </div>
+                </a>
+
+                <a href="oral.html" class="options oral">
+                    <div class="carrecaccueil">
+                        <p class="plant-name">Préparation Aux Oraux</p>
+                        <p class="plant-price">En savoir +</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- flèche droite -->
+            <button class="slider-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+    <!-- Script pour slider -->
+    <script>
+        const leftBtn = document.querySelector(".left-btn");
+        const rightBtn = document.querySelector(".right-btn");
+        const slider = document.querySelector(".programmes");
+
+        leftBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: -370, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: 370, behavior: 'smooth' });
+        });
+    </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Intensifs - SmartSuccess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="hautdepage">
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="programmes.html" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+</section>
+
+<!-- BANNIERE -->
+<section class="stage-banner">
+    <div class="banner-content">
+        <h1>Stages Intensifs</h1>
+        <p>Révision ciblée et encadrement personnalisé pour réussir vos examens et progresser rapidement.</p>
+    </div>
+</section>
+
+<!-- PRESENTATION -->
+<section class="programme-page">
+
+
+    <!-- PACKS / STAGES -->
+    <div class="packs-container">
+
+        <!-- Vacances d’Hiver -->
+        <div class="pack-card">
+            <h2>Vacances d’Hiver (Zone C)</h2>
+            <p><strong>1ère semaine :</strong> 23 au 27 février 2026</p>
+            <ul>
+                <li>Terminale : 10h – 12h</li>
+                <li>Première : 13h – 15h</li>
+                <li>Seconde : 15h30 – 17h30</li>
+            </ul>
+            <p><strong>2ème semaine :</strong> 2 au 6 mars 2026</p>
+            <ul>
+                <li>Terminale : 10h – 12h</li>
+                <li>Première : 13h – 15h</li>
+                <li>Seconde : 15h30 – 17h30</li>
+            </ul>
+            <a href="contact.html" class="btn-reserve">Réserver ce stage</a>
+        </div>
+
+        <!-- Vacances de Printemps -->
+        <div class="pack-card">
+            <h2>Vacances de Printemps (Zone C)</h2>
+            <p><strong>1ère semaine :</strong> 20 au 24 avril 2026</p>
+            <ul>
+                <li>Terminale* : 10h – 12h</li>
+                <li>Première** : 13h – 15h</li>
+                <li>Seconde : 15h – 17h</li>
+            </ul>
+            <p><strong>2ème semaine :</strong> 27 avril au 1er mai 2026</p>
+            <ul>
+                <li>Terminale* : 10h – 12h</li>
+                <li>Première** : 13h – 15h</li>
+                <li>Seconde : 15h – 17h</li>
+            </ul>
+            <p class="note">
+                *Terminale : révisions Bac et entraînements aux épreuves écrites<br>
+                **Première : révisions Bac et entraînements aux épreuves anticipées de mathématiques
+            </p>
+            <a href="contact.html" class="btn-reserve">Réserver ce stage</a>
+        </div>
+
+        <!-- Stage Objectif Brevet -->
+        <div class="pack-card">
+            <h2>Objectif Brevet</h2>
+            <p>15 au 19 juin – Au choix : matin ou après-midi</p>
+            <ul>
+                <li>Matin : 10h – 12h</li>
+                <li>Après-midi : 13h – 15h</li>
+            </ul>
+            <a href="contact.html" class="btn-reserve">Réserver ce stage</a>
+        </div>
+
+    </div>
+</section>
+
+
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+
+<!-- pour l'affichage du menu programme sur iphone -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownLink = document.querySelector('.dropdown-link');
+
+    dropdownLink.addEventListener('click', function (e) {
+        // empêche le lien de rediriger sur mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelector('.dropdown')?.classList.remove('open');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
