@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soutien Scolaire - SmartSuccess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="hautdepage">
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="programmes.html" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+</section>
+
+
+<section class="soutien-banner">
+    <div class="banner-content">
+        <h1>Soutien scolaire</h1>
+        <p>Un accompagnement personnalisé pour progresser, gagner en confiance et réussir durablement.</p>
+    </div>
+</section>
+
+<!-- PRESENTATION -->
+<section class="programme-page">
+
+
+    <!-- MATHS -->
+    <h2 class="section-subtitle">Mathématiques</h2>
+
+    <div class="packs-container">
+
+        <div class="pack-card">
+            <h3>Seconde</h3>
+            <p>
+                La classe de Seconde marque une étape importante dans la scolarité. 
+                L’accompagnement permet de consolider les bases, comprendre les nouvelles notions et adopter une méthode de travail efficace.
+            </p>
+            <ul>
+                <li>Renforcement des fondamentaux</li>
+                <li>Compréhension des méthodes de raisonnement</li>
+                <li>Organisation du travail personnel</li>
+            </ul>
+        </div>
+
+        <div class="pack-card">
+            <h3>Première</h3>
+            <p>
+                Année charnière du lycée, la Première nécessite un travail plus approfondi et une préparation aux premières échéances importantes.
+            </p>
+            <ul>
+                <li>Approfondissement des notions clés</li>
+                <li>Préparation aux épreuves anticipées</li>
+                <li>Renforcement de la méthodologie</li>
+            </ul>
+        </div>
+
+        <div class="pack-card">
+            <h3>Terminale</h3>
+            <p>
+                En Terminale, l’accompagnement est orienté vers la préparation du Baccalauréat et la consolidation des acquis.
+            </p>
+            <ul>
+                <li>Entraînement intensif sur exercices et annales</li>
+                <li>Gestion du temps et du stress</li>
+                <li>Optimisation des performances</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- AIDE AUX DEVOIRS -->
+    <h2 class="section-subtitle">Aide aux devoirs – Collège</h2>
+
+    <div class="packs-container">
+
+        <div class="pack-card">
+            <h3>6ème / 5ème</h3>
+            <p>
+                Une transition progressive vers le collège, avec un accompagnement pour structurer le travail et renforcer les bases.
+            </p>
+            <ul>
+                <li>Organisation et autonomie</li>
+                <li>Compréhension des consignes</li>
+                <li>Consolidation des fondamentaux</li>
+            </ul>
+        </div>
+
+        <div class="pack-card">
+            <h3>4ème</h3>
+            <p>
+                Un suivi régulier pour approfondir les notions et développer une méthode de travail solide.
+            </p>
+            <ul>
+                <li>Approfondissement des connaissances</li>
+                <li>Structuration du raisonnement</li>
+                <li>Accompagnement personnalisé</li>
+            </ul>
+        </div>
+
+        <div class="pack-card">
+            <h3>3ème</h3>
+            <p>
+                Année clé avant le lycée, la 3ème nécessite un accompagnement renforcé pour préparer la suite du parcours scolaire.
+            </p>
+            <ul>
+                <li>Consolidation des acquis</li>
+                <li>Préparation aux échéances importantes</li>
+                <li>Renforcement de la confiance</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <a href="contact.html" class="btn-reserve">Prendre Rendez-vous</a>
+    </div>
+
+</section>
+
+
+
+<!-- pour l'affichage du menu programme sur iphone -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownLink = document.querySelector('.dropdown-link');
+
+    dropdownLink.addEventListener('click', function (e) {
+        // empêche le lien de rediriger sur mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelector('.dropdown')?.classList.remove('open');
+        }
+    });
+</script>
+
+
+
+ <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+</body>
+</html>

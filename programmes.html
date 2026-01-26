@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Programmes - Smart Success</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ===== PAGE PROGRAMMES ===== */
+header.header {
+    position: relative;
+    z-index: 9999;
+}
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            color: #090c0f;
+            background-color: #fdfdfd;
+        }
+
+        header.header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #125a94;
+        }
+
+        header.header img {
+            width: 160px;
+        }
+
+        nav.nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav.nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav.nav a:hover {
+            color: #f2f5f9;
+        }
+
+        /* HERO BANNER */
+        .hero-banner {
+            position: relative;
+            background: url('../SMARTIMAGE/programme-banner.jpg') center/cover no-repeat;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* CARDS GRID */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    }
+}
+
+        .module-card {
+            position: relative;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .module-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .module-info {
+            padding: 20px;
+        }
+
+        .module-info h3 {
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
+            color: #125a94;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .module-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .module-info a {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #125a94;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .module-info a:hover {
+            background-color: #0d3e6b;
+        }
+
+      
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .module-card img {
+                height: 180px;
+            }
+
+            .module-info h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="programmes.html" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Nos Programmes</h1>
+            <p>Découvrez nos modules pour réussir votre parcours scolaire et professionnel</p>
+        </div>
+    </section>
+<!-- MODULES GRID -->
+<section class="modules-grid">
+    <!-- SOUTIEN SCOLAIRE -->
+    <div class="module-card">
+        <img src="SMARTIMAGE/aidedevoir.png" alt="Soutien scolaire">
+        <div class="module-info">
+            <h3>Soutien Scolaire</h3>
+            <p>Accompagnement personnalisé pour réussir toutes vos matières et examens.</p>
+            <a href="aide-aux-devoirs.html">En savoir +</a>
+        </div>
+    </div>
+
+    <!-- PARCOURSUP -->
+    <div class="module-card">
+        <img src="SMARTIMAGE/parcoursup.png" alt="Parcoursup">
+        <div class="module-info">
+            <h3>Module Parcoursup</h3>
+            <p>Préparez votre orientation et vos dossiers avec des conseils experts.</p>
+            <a href="parcoursup.html">En savoir +</a>
+        </div>
+    </div>
+
+    <!-- STAGES INTENSIFS -->
+    <div class="module-card">
+        <img src="SMARTIMAGE/stage.png" alt="Stages intensifs">
+        <div class="module-info">
+            <h3>Stages Intensifs</h3>
+            <p>Boostez vos compétences rapidement grâce à nos stages ciblés.</p>
+            <a href="stages-intensifs.html">En savoir +</a>
+        </div>
+    </div>
+
+    <!-- PRÉPARATION ORAUX -->
+    <div class="module-card">
+        <img src="SMARTIMAGE/oral.jpg" alt="Préparation aux oraux">
+        <div class="module-info">
+            <h3>Préparation aux Oraux</h3>
+            <p>Maîtrisez vos présentations et entretiens avec nos experts.</p>
+            <a href="oral.html">En savoir +</a>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+
+</body>
+</html>

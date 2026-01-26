@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epreuves Orales - SmartSuccess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="hautdepage">
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="programmes.html" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+</section>
+
+<!-- Bannière -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Préparation aux oraux</h1>
+      <p>Gagner en confiance, structurer son discours et convaincre à l’oral</p>
+    </div>
+  </section>
+
+<!-- Intro -->
+  <section class="intro-section">
+    <p>
+      Les oraux sont des étapes décisives dans un parcours scolaire et académique.
+      Chez <strong>Smart Success</strong>, nous accompagnons les élèves dans une préparation
+      complète, exigeante et personnalisée afin de leur permettre d’aborder leurs épreuves
+      avec assurance, clarté et sérénité.
+    </p>
+  </section>
+
+  <!-- Coaching Grand Oral -->
+  <section class="coaching-section">
+    <h2>Coaching Grand Oral du Baccalauréat</h2>
+
+    <div class="cards-container">
+      <div class="coaching-card">
+        <h3>Accompagnement complet</h3>
+        <ul>
+          <li>Présentation claire et structurée du projet d’orientation</li>
+          <li>Travail sur la prise de parole et la confiance en soi</li>
+          <li>Amélioration de la communication verbale et non verbale</li>
+          <li>Conseils méthodologiques adaptés aux attentes du jury</li>
+          <li>Deux simulations complètes de Grand Oral</li>
+        </ul>
+      </div>
+
+      <div class="coaching-card">
+        <h3>Séance de coaching unitaire</h3>
+        <ul>
+          <li>Répondre à des questions spécifiques sur l’épreuve</li>
+          <li>Travailler une question précise du Grand Oral</li>
+          <li>Réaliser une simulation ciblée</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaching Entretiens -->
+  <section class="coaching-section alt">
+    <h2>Coaching entretiens d’admission</h2>
+
+    <div class="cards-container">
+      <div class="coaching-card">
+        <h3>Préparation complète aux entretiens</h3>
+        <ul>
+          <li>Savoir se présenter avec clarté et assurance</li>
+          <li>Mettre en valeur son parcours et sa personnalité</li>
+          <li>Accompagnement personnalisé selon l’école visée</li>
+          <li>Préparation aux écoles de commerce et d’ingénieurs</li>
+          <li>Deux à trois simulations d’entretiens</li>
+        </ul>
+      </div>
+
+      <div class="coaching-card">
+        <h3>Séance de coaching unitaire</h3>
+        <ul>
+          <li>Travailler un point précis de l’entretien</li>
+          <li>Traiter une question spécifique</li>
+          <li>Réaliser une simulation d’entretien ciblée</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Prêt(e) à réussir vos oraux ?</h2>
+    <p>Contactez-nous pour un accompagnement personnalisé.</p>
+    <a href="contact.html" class="cta-button">Nous contacter</a>
+  </section>
+
+
+  
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+<!-- pour l'affichage du menu programme sur iphone -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownLink = document.querySelector('.dropdown-link');
+
+    dropdownLink.addEventListener('click', function (e) {
+        // empêche le lien de rediriger sur mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelector('.dropdown')?.classList.remove('open');
+        }
+    });
+</script>
+
+
+
+
+</body>
+
+
+</html>

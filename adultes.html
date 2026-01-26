@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations Adultes - Smart Success</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="hautdepage">
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+</section>
+
+<!-- BANNIÈRE PRINCIPALE -->
+<section class="top-page" style="background-image: url('../SMARTIMAGE/formations.jpg');">
+    <div class="landing-page">
+        <h1 class="big-title">Formations pour Adultes</h1>
+        <p class="subtitle">Découvrez nos programmes pour développer vos compétences numériques et réseaux sociaux.</p>
+    </div>
+</section>
+
+<!-- SECTION FORMATIONS -->
+<section class="coaching-section">
+    <h2 class="section-title">Nos Formations</h2>
+
+    <div class="cards-container">
+
+        <!-- Formation E-COMMERCE -->
+        <div class="coaching-card" style="background-image: url('../SMARTIMAGE/ecommerce.jpg'); background-size: cover; background-position: center;">
+            <div style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 12px;">
+                <h3>E-commerce</h3>
+                <ul>
+                    <li>Création complète de votre site e-commerce</li>
+                    <li>Paramétrage et gestion de TikTok Shop</li>
+                    <li>Optimisation pour vendre rapidement</li>
+                </ul>
+                <a href="#" class="btn-reserve">En savoir +</a>
+            </div>
+        </div>
+
+        <!-- Formation OUTILS INFORMATIQUES -->
+        <div class="coaching-card" style="background-image: url('../SMARTIMAGE/outils.jpg'); background-size: cover; background-position: center;">
+            <div style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 12px;">
+                <h3>Outils Informatiques</h3>
+                <ul>
+                    <li>Prise en main de ChatGPT, Gemini et autres IA</li>
+                    <li>Maîtrise des outils bureautiques et productivité</li>
+                    <li>Optimisation de votre workflow</li>
+                </ul>
+                <a href="#" class="btn-reserve">En savoir +</a>
+            </div>
+        </div>
+
+        <!-- Formation RÉSEAUX SOCIAUX -->
+        <div class="coaching-card" style="background-image: url('../SMARTIMAGE/reseaux.jpg'); background-size: cover; background-position: center;">
+            <div style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 12px;">
+                <h3>Réseaux Sociaux</h3>
+                <ul>
+                    <li>Comprendre les algorithmes et tendances</li>
+                    <li>Création de contenu efficace</li>
+                    <li>Développement d'une communauté engagée</li>
+                </ul>
+                <a href="#" class="btn-reserve">En savoir +</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+    <h2>Prêt à booster vos compétences ?</h2>
+    <p>Choisissez la formation adaptée à vos besoins et démarrez dès aujourd'hui !</p>
+    <a href="contact.html" class="cta-button">Contactez-nous</a>
+</section>
+
+
+
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+    <!-- Script pour slider -->
+    <script>
+        const leftBtn = document.querySelector(".left-btn");
+        const rightBtn = document.querySelector(".right-btn");
+        const slider = document.querySelector(".programmes");
+
+        leftBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: -370, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: 370, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- pour l'affichage du menu programme sur iphone -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownLink = document.querySelector('.dropdown-link');
+
+    dropdownLink.addEventListener('click', function (e) {
+        // empêche le lien de rediriger sur mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelector('.dropdown')?.classList.remove('open');
+        }
+    });
+</script>
+
+
+</body>
+
+
+</html>

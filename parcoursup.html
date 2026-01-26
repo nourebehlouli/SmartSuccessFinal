@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Parcoursup - SmartSuccess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+
+<section class="hautdepage">
+    <header class="header">
+            <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+
+                            <li class="dropdown">
+                            <a href="programmes.html" class="dropdown-link">Nos Programmes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aide-aux-devoirs.html">Soutien scolaire</a></li>
+                                    <li><a href="parcoursup.html">Module Parcoursup</a></li>
+                                    <li><a href="stages-intensifs.html">Stages intensifs</a></li>
+                                    <li><a href="oral.html">Préparation aux oraux</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="contact.html">Nous contacter</a></li>
+                                </ul>
+                            </li>
+
+                    <li><a href="adultes.html">Formation Adulte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+</section>
+
+<!-- BANNIERE -->
+<section class="parcoursup-banner">
+    <div class="banner-content">
+        <h1>Coaching Parcoursup</h1>
+        <p>Maximisez vos chances d’intégrer les formations et grandes écoles grâce à notre accompagnement personnalisé.</p>
+    </div>
+</section>
+
+<!-- PRESENTATION -->
+<section class="programme-page">
+
+    <!-- PACKS -->
+    <div class="packs-container">
+
+        <!-- Pack Réussir Parcoursup -->
+        <div class="pack-card">
+            <h2>Pack Réussir Parcoursup</h2>
+            <p>4 séances de 1h30 pour un accompagnement complet :</p>
+            <ul>
+                <li>Accompagnement dans le processus d'inscription Parcoursup</li>
+                <li>Conseils pour affiner vos choix et établir la liste de vos vœux</li>
+                <li>Optimisation du dossier pour intégrer les grandes écoles</li>
+                <li>Relecture et correction des lettres de motivation</li>
+            </ul>
+            <a href="contact.html" class="btn-reserve">Réserver ce pack</a>
+        </div>
+
+        <!-- Séance Unitaire -->
+        <div class="pack-card">
+            <h2>Séance Unitaire</h2>
+            <p>Séance de 1h30 pour un accompagnement ponctuel :</p>
+            <ul>
+                <li>Réponses à vos questions spécifiques</li>
+                <li>Affiner un vœu en particulier</li>
+                <li>Relecture et correction d'une lettre de motivation</li>
+            </ul>
+            <a href="contact.html" class="btn-reserve">Réserver une séance</a>
+        </div>
+
+    </div>
+</section>
+
+    <footer>
+        <p class="copyright"> &copy; 2026 - Smart Success Tous droits réservés</p>
+        <a href="cgv.html" class="cgv">Mentions Légales</a>
+    </footer>
+
+
+
+<!-- pour l'affichage du menu programme sur iphone -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownLink = document.querySelector('.dropdown-link');
+
+    dropdownLink.addEventListener('click', function (e) {
+        // empêche le lien de rediriger sur mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelector('.dropdown')?.classList.remove('open');
+        }
+    });
+</script>
+
+
+
+</body>
+
+
+
+
+</html>
