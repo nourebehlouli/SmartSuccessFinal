@@ -12,6 +12,24 @@
 
 <section class="hautdepage">
     <header class="header">
+
+         <!-- Bouton menu mobile -->
+<div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Menu mobile -->
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programmes.html">Nos Programmes</a></li>
+        <li><a href="adultes.html">Formation Adulte</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+        
             <img src="SMARTIMAGE/logoBGblanc.png" alt="LogoSmartBG">
             <nav class="navbar">
                 <ul>
@@ -108,10 +126,19 @@
 </script>
 
 
-
+<!-- Menu Burger -->
+        <script>
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+    
+        burger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        </script>
 </body>
 
 
 
 
 </html>
+
